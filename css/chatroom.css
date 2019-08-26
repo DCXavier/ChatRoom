@@ -492,7 +492,7 @@ div.friend > div > div > span:last-child {
     color: #b5b5b5;
 }
 
-div.friend-list > div.chatting {
+div.list-box > div.chatting {
     border-left: 3px solid #1b93ec;
 }
 
@@ -565,7 +565,7 @@ div.friend > div > span {
     font-size: 14px;
     color: #7f8fa4;
     font-weight: 700;
-    line-height: 48px;
+    line-height: 32px;
 }
 
 div.friend > p {
