@@ -1,0 +1,914 @@
+@font-face {
+    font-family: PNS;
+    src: url('../fonts/ProximaNovaSemibold.woff2');
+}
+
+/* 全局高度自适应 */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+}
+
+/* 最左侧主菜单边栏 */
+div.main-menu {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background-color: #1d2531;
+}
+
+div.main-menu > div.main-menu-box > button {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 20px 20px 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 2px #fff;
+    -moz-box-shadow: 0 0 2px #fff;
+    box-shadow: 0 0 2px #fff;
+    border-width: 2px;
+}
+
+div.main-menu-box > button:active {
+    -webkit-box-shadow: 0 0 10px #fff inset;
+    -moz-box-shadow: 0 0 10px #fff inset;
+    box-shadow: 0 0 10px #fff inset;
+    border-width: 1px;
+}
+
+div.main-menu-box > button:first-child {
+    border-color: #2da0f7;
+    background: #2096f0 url("../images/menu-1.png") no-repeat center;
+}
+
+div.main-menu-box > button:nth-child(2) {
+    border-color: #9886e3;
+    background: #927ce4 url("../images/menu-2.png") no-repeat center;
+}
+
+div.main-menu-box > button:nth-child(3) {
+    border-color: #f15134;
+    background: #da371b url("../images/menu-3.png") no-repeat center;
+}
+
+div.main-menu-box > button:last-child {
+    border-color: #2d3848;
+    background: rgba(0, 0, 0, 0) url("../images/menu-4.png") no-repeat center;
+}
+
+div.main-menu > div.main-menu-other {
+    position: absolute;
+    width: 48px;
+    height: 16px;
+    left: 26px;
+    bottom: 20px;
+}
+
+div.main-menu-other > a {
+    width: 16px;
+    height: 16px;
+}
+
+div.main-menu-other > a:first-child {
+    float: left;
+    background: url("../images/spirit.png") no-repeat -106px -33px;
+}
+
+div.main-menu-other > a:last-child {
+    float: right;
+    background: url("../images/spirit.png") no-repeat -245px -33px;
+}
+
+/* 中间详细菜单 */
+div.detail-menu {
+    /*float: left;*/
+    width: 250px;
+    height: 100%;
+    border: 1px solid black;
+    background-color: #222c3c;
+    overflow: hidden;
+}
+
+div.detail-menu:hover {
+    overflow-y: scroll;
+}
+
+/*div.detail-menu*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #2096f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #625c7c;
+}
+
+div.detail-menu > div.menu-box {
+    width: 191px;
+    margin: 0 30px 0;
+    padding: 30px 0 30px;
+}
+
+div.detail-menu > div.menu {
+    height: 196px;
+}
+
+div.detail-menu > div.products {
+    height: 165px;
+    border-top: 1px solid #2a3547;
+    border-bottom: 1px solid #2a3547;
+}
+
+div.detail-menu > div.dashboard {
+    height: 203px;
+}
+
+div.menu-box > h6 {
+    font-family: PNS, Consolas, sans-serif;
+    font-size: 12px;
+    color: #5b6779;
+    /*border: 1px solid #9886e3;*/
+}
+
+div.menu-box > h6::after {
+    content: '';
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background: url("../images/spirit.png") no-repeat -245px -33px;
+}
+
+div.detail-menu > div > nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+div.detail-menu > div.menu > nav {
+    height: 154px;
+}
+
+div.detail-menu > div.products > nav {
+    height: 130px;
+}
+
+div.detail-menu > div.dashboard > nav {
+    height: 160px;
+}
+
+div.detail-menu > div > nav > a {
+    position: relative;
+}
+
+.tips::after {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 8px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+div.menu > nav > a:nth-child(2)::after {
+    content: '54';
+    width: 32px;
+    background-color: #1c93ed;
+}
+
+div.dashboard > nav > a:first-child::after {
+    content: '21';
+    width: 32px;
+    background-color: #1c93ed;
+}
+
+div.dashboard > nav > a:nth-child(3)::after {
+    content: '!';
+    width: 24px;
+    background-color: #eb4b2e;
+}
+
+div.products > nav > a::before {
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 16px;
+    float: left;
+    margin-top: 12px;
+}
+
+div.products > nav > a:first-child::before {
+    background: url("../images/spirit.png") no-repeat -37px -98px;
+}
+
+div.products > nav > a:nth-child(2)::before {
+    margin-top: 15px;
+    background: url("../images/spirit.png") no-repeat -108px -242px;
+}
+
+div.products > nav > a:nth-child(3)::before {
+    background: url("../images/spirit.png") no-repeat -37px -240px;
+}
+
+div.products > nav > a:nth-child(4)::before {
+    background: url("../images/spirit.png") no-repeat -181px -238px;
+}
+
+div.detail-menu > div > nav > a {
+    display: block;
+    width: 100%;
+    flex: 1;
+    color: #b7c0cd;
+    text-align: left;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: PNS, Consolas, sans-serif;
+}
+
+div.detail-menu > div.goals {
+    width: 190px;
+    height: 31px;
+    margin-top: 133px;
+    padding: 0 30px 23px;
+}
+
+div.goals > div:first-child {
+    width: 100%;
+    height: 13px;
+    margin-bottom: 14px;
+}
+
+div.goals > div:first-child > span:first-child,
+div.goals > div:first-child > span:nth-child(2) {
+    height: 13px;
+    font-size: 14px;
+    color: #fff;
+    font-family: PNS, Consolas, sans-serif;
+}
+
+div.goals > div:first-child > span:first-child {
+    float: left;
+    width: 102px;
+    margin-right: 7px;
+}
+
+div.goals > div:first-child > span:nth-child(2) {
+    width: 79px;
+    float: right;
+}
+
+div.goals > div:last-child {
+    position: relative;
+    width: 190px;
+    height: 4px;
+    background-color: #2d3848;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+div.goals > div:last-child > span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #8c71e5;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+/* 右侧主页面 */
+div.main-page {
+    width: calc(100% - 350px);
+    height: 100%;
+    font-family: PNS, Consolas, sans-serif
+}
+
+div.main-page > header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+div.main-page > header > h2 {
+    display: inline-block;
+    font-size: 24px;
+    color: #354052;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 30px;
+}
+
+div.main-page > header > div.avatar {
+    position: absolute;
+    display: inline-block;
+    width: 204px;
+    height: 58px;
+    right: 30px;
+    top: 11px;
+}
+
+div.avatar > a.avatar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 4px;
+    background: url("../images/user_2.png") no-repeat center;
+}
+
+div.avatar > a.avatar::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 22px;
+    height: 22px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: #fff;
+}
+
+div.avatar > a > span {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 14px;
+    height: 14px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0) url("../images/online.png") no-repeat center;
+}
+
+div.avatar > span {
+    margin-left: 16px;
+}
+
+div.avatar > span.username {
+    position: absolute;
+    width: 80px;
+    height: 18px;
+    font-size: 16px;
+    top: 13px;
+    left: 50px;
+    font-weight: 800;
+    font-family: PNS, Consolas, sans-serif;
+    color: #2399f1;
+}
+
+div.avatar > span.intro {
+    position: absolute;
+    font-size: 14px;
+    width: 100px;
+    height: 15px;
+    top: 36px;
+    left: 50px;
+    color: #b5b5b5;
+}
+
+div.avatar > a.more {
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    right: 0;
+    top: 24px;
+    background: url("../images/down_arrow.png") no-repeat center;
+}
+
+div.main-page > div.friend-list {
+    width: 400px;
+    height: calc(100% - 80px);
+    float: left;
+    /*border: 1px solid #b7c0cd;*/
+    /*box-sizing: border-box;*/
+    overflow: hidden;
+}
+
+div.main-page > div.friend-list::-webkit-scrollbar {
+    background-color: #ccc;
+}
+
+div.main-page > div.friend-list::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+div.main-page > div.friend-list:hover {
+    overflow-y: scroll;
+}
+
+div.friend-list > div.search {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border: 1px solid #e5e8ee;
+}
+
+div.search > input {
+    width: 340px;
+    height: 36px;
+    border: 1px solid #e5e8ee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 36px;
+    text-indent: 1em;
+    margin-top: 16px;
+    margin-left: 30px;
+}
+
+div.search > a {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/spirit.png") no-repeat -38px -170px;
+    top: 26px;
+    right: 40px;
+}
+
+div.friend-list > div.friend {
+    width: 347px;
+    height: 130px;
+    border: 1px solid #e5e8ee;
+    padding-left: 30px;
+    padding-right: 23px;
+}
+
+div.friend > div {
+    position: relative;
+    width: 100%;
+    height: 48px;
+}
+
+div.friend > div > div {
+    position: relative;
+    width: 230px;
+    height: 48px;
+}
+
+div.friend > div > div > span:first-child {
+    position: absolute;
+    top: 5px;
+    left: 68px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #585d68;
+}
+
+div.friend > div > div > span:last-child {
+    position: absolute;
+    top: 28px;
+    left: 68px;
+    font-size: 14px;
+    color: #b5b5b5;
+}
+
+div.friend-list > div.chatting {
+    border-left: 3px solid #1b93ec;
+}
+
+div.chatting > div > div > span:first-child {
+    position: relative;
+    color: #2399f1;
+    padding-left: 15px;
+}
+
+div.chatting > div > div > span:first-child::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #2399f1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: 0;
+    top: 5px;
+}
+
+div.friend > div > div::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    top: 2px;
+    left: 0;
+    background: no-repeat center;
+}
+
+div.friend:nth-child(2) > div > div::before {
+    background: url("../images/user_1.png");
+}
+
+div.friend:nth-child(3) > div > div::before {
+    background: url("../images/user_3.png");
+}
+
+div.friend:nth-child(4) > div > div::before {
+    background: url("../images/user_4.png");
+}
+
+div.friend:nth-child(5) > div > div::before {
+    background: url("../images/user_5.png");
+}
+
+div.friend:nth-child(6) > div > div::before {
+    background: url("../images/user_6.png");
+}
+
+div.friend:nth-child(7) > div > div::before {
+    background: url("../images/user_7.png");
+}
+
+div.friend:nth-child(8) > div > div::before {
+    background: url("../images/user_8.png");
+}
+
+div.friend > div > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    color: #7f8fa4;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+div.friend > p {
+    position: relative;
+    width: 327px;
+    height: 32px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #585d68;
+    font-family: PNR, Consolas, sans-serif;
+}
+
+div.friend > p.tips::after {
+    content: '4';
+    width: 24px;
+    background-color: #1c93ed;
+    right: -25px;
+    cursor: pointer;
+}
+
+div.main-page > div.chat-room {
+    width: calc(100% - 400px);
+    height: calc(100% - 80px);
+    float: right;
+}
+
+div.main-page > div.chat-room > div.title {
+    position: relative;
+    width: calc(100% - 30px);
+    height: 70px;
+    border: 1px solid #e5e8ee;
+    padding-left: 30px;
+}
+
+div.chat-room > div.title > h3 {
+    font-size: 18px;
+    color: #585d68;
+    font-weight: 700;
+    width: 140px;
+    height: 70px;
+    line-height: 70px;
+}
+
+div.title > h3::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #1bb934;
+    margin-left: 9px;
+    margin-top: 31px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+div.title > div.menu-basic {
+    position: absolute;
+    display: flex;
+    width: 109px;
+    height: 32px;
+    right: 210px;
+    top: 19px;
+}
+
+div.title > div > button {
+    flex: 1;
+    height: 100%;
+    border: 1px solid #e5e8ee;
+    background: #f9f9f9 no-repeat;
+}
+
+div.title > div.menu-basic > button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: url("../images/spirit.png") -27px -26px;
+}
+
+div.title > div.menu-basic > button:nth-child(2) {
+    background: url("../images/spirit.png") -171px -25px;
+}
+
+div.title > div.menu-basic > button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: url("../images/spirit.png") -99px -91px;
+}
+
+div.title > span::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    background-color: #ced0da;
+    width: 1px;
+    height: 30px;
+    left: -21px;
+    top: 1px;
+}
+
+div.title > span {
+    position: absolute;
+    right: 108px;
+    top: 19px;
+    /*width: 97px;*/
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #56688a;
+    text-align: right;
+}
+
+div.title > div.menu-page {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 19px;
+    width: 73px;
+    height: 32px;
+}
+
+div.title > div.menu-page > button {
+    flex: 1;
+    height: 32px;
+}
+
+div.title > div.menu-page > button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: url("../images/spirit.png") -98px -164px;
+}
+
+div.title > div.menu-page > button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: url("../images/spirit.png") -175px -159px;
+}
+
+div.chat-room > div.message {
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow: hidden;
+    border: 1px solid #b7c0cd;
+    box-sizing: border-box;
+}
+
+div.chat-room > div.message::-webkit-scrollbar {
+    background-color: #ccc;
+}
+
+div.chat-room > div.message::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+div.chat-room > div.message:hover {
+    overflow-y: scroll;
+}
+
+div.message > div {
+    position: relative;
+    width: 680px;
+    padding-left: 96px;
+}
+
+div.message > div::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 46px;
+    height: 46px;
+    left: 30px;
+    top: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: no-repeat center;
+}
+
+div.message > div:first-child::before,
+div.message > div:nth-child(4)::before,
+div.message > div:nth-child(7)::before {
+    background-image: url("../images/user_1.png");
+}
+
+div.message > div:nth-child(2)::before,
+div.message > div:nth-child(5)::before {
+    background-image: url("../images/user_2.png");
+}
+
+div.message > div {
+    margin-top: 25px;
+}
+
+div.message > div:nth-child(5) {
+    height: 245px;
+}
+
+div.message > div:nth-child(5) > div.upload_photo {
+    width: 100%;
+    height: 100px;
+    margin-top: 17px;
+}
+
+div.message > div:nth-child(5) > div.upload_photo > div {
+    float: left;
+    width: 156px;
+    height: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-position: center;
+}
+
+div.upload_photo > div:first-child {
+    background-image: url("../images/user_photo_1.png");
+}
+
+div.upload_photo > div:last-child {
+    margin-left: 13px;
+    background-image: url("../images/user_photo_2.png");
+}
+
+div.upload_photo > div:last-child > span {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+div.upload_photo > div:last-child > span::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(150, 150, 150, 0.5) url("../images/spirit.png") no-repeat -228px -217px;
+}
+
+div.upload_photo > div:last-child:hover > span{
+    display: block;
+    cursor: pointer;
+}
+
+div.message > div:nth-child(4),
+div.message > div:nth-child(7) {
+    margin-top: 0;
+}
+
+div.message > div > h4 {
+    color: #585d68;
+    font-size: 16px;
+    font-family: PNS, Consolas, sans-serif;
+}
+
+div.message > div > h4 > span {
+    color: #7f8fa4;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+div.message > div > p {
+    font-size: 14px;
+    padding-right: 30px;
+    color: #585d68;
+}
+
+div.message > span {
+    position: relative;
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    color: #7f8fa4;
+    margin: 18px 0;
+    padding-left: 0;
+}
+
+div.message > span:nth-child(6) {
+    color: #2399f1;
+}
+
+div.message > span:nth-child(6)::before,
+div.message > span:nth-child(6)::after {
+    width: calc(50% - 63px);
+    background-color: #2399f1;
+}
+
+div.message > span::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 8px;
+    width: calc((100% - 90px) / 2);
+    height: 1px;
+    background-color: #d9dde3;
+}
+
+div.message > span::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 8px;
+    width: calc((100% - 90px) / 2);
+    height: 1px;
+    background-color: #d9dde3;
+}
+
+div.message > div:last-child::before {
+    display: none;
+}
+
+div.message > div:last-child {
+    position: relative;
+    width: calc(100% - 196px);
+    height: 54px;
+    border: 1px solid #b7c0cd;
+    margin: 28px 30px 21px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+div.message > div:last-child > button {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    left: 0;
+    top: 0;
+    border: 1px solid #e5e8ee;
+    background: url("../images/spirit.png") no-repeat -164px -82px;
+}
+
+div.message > div:last-child > input {
+    position: absolute;
+    left: 54px;
+    top: 0;
+    text-indent: 1em;
+    width: calc(100% - 54px);
+    height: 54px;
+    border: none;
+}
+
