@@ -90,7 +90,7 @@ div.main-menu-other > a:last-child {
 
 /* 中间详细菜单 */
 div.detail-menu {
-    /*float: left;*/
+    position: relative;
     width: 250px;
     height: 100%;
     border: 1px solid black;
@@ -102,7 +102,6 @@ div.detail-menu:hover {
     overflow-y: scroll;
 }
 
-/*div.detail-menu*/
 ::-webkit-scrollbar {
     width: 5px;
     background-color: #2096f0;
@@ -130,6 +129,7 @@ div.detail-menu > div.products {
 
 div.detail-menu > div.dashboard {
     height: 203px;
+    margin-bottom: 317px;
 }
 
 div.menu-box > h6 {
@@ -241,15 +241,19 @@ div.detail-menu > div > nav > a {
 }
 
 div.detail-menu > div.goals {
+    position: fixed;
     width: 190px;
-    height: 31px;
-    margin-top: 133px;
-    padding: 0 30px 23px;
+    height: 50px;
+    bottom: 0;
+    left: 102px;
+    padding: 0 22px 23px 30px;
+    background-color: #222c3c;
 }
 
 div.goals > div:first-child {
     width: 100%;
     height: 13px;
+    margin-top: 15px;
     margin-bottom: 14px;
 }
 
@@ -401,21 +405,6 @@ div.main-page > div.friend-list {
     width: 400px;
     height: calc(100% - 80px);
     float: left;
-    /*border: 1px solid #b7c0cd;*/
-    /*box-sizing: border-box;*/
-    overflow: hidden;
-}
-
-div.main-page > div.friend-list::-webkit-scrollbar {
-    background-color: #ccc;
-}
-
-div.main-page > div.friend-list::-webkit-scrollbar-thumb {
-    background-color: #333;
-}
-
-div.main-page > div.friend-list:hover {
-    overflow-y: scroll;
 }
 
 div.friend-list > div.search {
@@ -448,7 +437,25 @@ div.search > a {
     right: 40px;
 }
 
-div.friend-list > div.friend {
+div.friend-list > div.list-box {
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow: hidden;
+}
+
+div.friend-list > div.list-box::-webkit-scrollbar {
+    background-color: #ccc;
+}
+
+div.friend-list > div.list-box::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+div.friend-list > div.list-box:hover {
+    overflow-y: scroll;
+}
+
+div.list-box > div.friend {
     width: 347px;
     height: 130px;
     border: 1px solid #e5e8ee;
@@ -523,31 +530,31 @@ div.friend > div > div::before {
     background: no-repeat center;
 }
 
-div.friend:nth-child(2) > div > div::before {
+div.friend:nth-child(1) > div > div::before {
     background: url("../images/user_1.png");
 }
 
-div.friend:nth-child(3) > div > div::before {
+div.friend:nth-child(2) > div > div::before {
     background: url("../images/user_3.png");
 }
 
-div.friend:nth-child(4) > div > div::before {
+div.friend:nth-child(3) > div > div::before {
     background: url("../images/user_4.png");
 }
 
-div.friend:nth-child(5) > div > div::before {
+div.friend:nth-child(4) > div > div::before {
     background: url("../images/user_5.png");
 }
 
-div.friend:nth-child(6) > div > div::before {
+div.friend:nth-child(5) > div > div::before {
     background: url("../images/user_6.png");
 }
 
-div.friend:nth-child(7) > div > div::before {
+div.friend:nth-child(6) > div > div::before {
     background: url("../images/user_7.png");
 }
 
-div.friend:nth-child(8) > div > div::before {
+div.friend:nth-child(7) > div > div::before {
     background: url("../images/user_8.png");
 }
 
